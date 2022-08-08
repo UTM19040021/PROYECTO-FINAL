@@ -19,7 +19,7 @@ app.use(express.json());
 app.use("/api",routes);
 app.get("/",(request, response)=>{
     return response.status(200).json({
-        msg:"Estas dentro de la Api Get",
+        msg:"Estas dentro de la Api de Jennifer",
         status : 200
     })
 });
