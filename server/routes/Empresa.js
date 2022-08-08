@@ -10,21 +10,21 @@ const parseId = (id)=>{
 router.post('/', (req, response) => {
 
     //Le decimos a MONGO QUE VAMOS A GUARDAR LOS DATOS.
-    const Empresa = new EmpresaModel(req.body);
+    const Empresa = EmpresaModel(req.body);
     Empresa.save()
-    .then((EmpresaRegistrda) => {
+    .then((EmpresaRegistrada) => {
        return response.status(200).json({
             msg:"Se ha registrado correctamente",
             status: 200,
             cont: {
-                maestro: EmpresaRegistrda
+                Empresa: EmpresaRegistrada
             }
         });
         
     })
     .catch((err) => {
         return response.status(400).json({
-            msg:"Error al registrar el maestro",
+            msg:"Error al registrar la empresa",
             status: 400,
             cont: {
                 error: err

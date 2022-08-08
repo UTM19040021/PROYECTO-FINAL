@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const parseId= (id) => {return mongoose.Types.ObjectId(id)}
 
-const CategoriasSchema = mongoose.Schema({
+const EmpresaSchema = mongoose.Schema({
     strNombre:{
         type:String,
         required: [true, "Es necesario ingresar tu Nombre"]
@@ -13,4 +13,4 @@ const CategoriasSchema = mongoose.Schema({
 })
 
 
-module.exports = mongoose.model("Empresa", CategoriasSchema);
+module.exports = mongoose.model("Empresa", EmpresaSchema);

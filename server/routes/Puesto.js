@@ -12,19 +12,19 @@ router.post('/', (req, response) => {
     //Le decimos a MONGO QUE VAMOS A GUARDAR LOS DATOS.
     const Puesto= new Puestomodel(req.body);
     Puesto.save()
-    .then((PuestoRegistrdo) => {
+    .then((PuestoRegistrado) => {
        return response.status(200).json({
             msg:"Se ha registrado correctamente",
             status: 200,
             cont: {
-                maestro: PuestoRegistrdo
+                Puesto: PuestoRegistrado
             }
         });
         
     })
     .catch((err) => {
         return response.status(400).json({
-            msg:"Error al registrar el maestro",
+            msg:"Error al registrar el puesto",
             status: 400,
             cont: {
                 error: err

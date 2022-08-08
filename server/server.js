@@ -26,12 +26,11 @@ app.get("/",(request, response)=>{
 
 mongoose.connect(process.env.URLDB,{})
 .then(() => {
-    console.log("[MONGODB]".green+"DATABASE CONNECTION SUCCESSFULLY");   
-    
+    console.log("[MONGODB]".green+"DATABASE CONNECTION SUCCESSFULLY");
  })
  .catch((err) => {
     console.log("[MONDODB]".red + "Coneccion fail");
 });
 app.listen(process.env.PORT, () => {
- console.log("Listen in the PORT: "+ process.env.PORT.blue);
+    console.log("Listen in the PORT: "+ process.env.PORT.blue);
 });

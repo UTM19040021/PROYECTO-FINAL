@@ -9,7 +9,7 @@ class Email{
             service: "gmail",
             auth:{
                 user:"utm19040021@utma.edu.mx",
-                pass:"1234"
+                pass:"gdpfqshhvyosbjlk"
             }
         });
     }
